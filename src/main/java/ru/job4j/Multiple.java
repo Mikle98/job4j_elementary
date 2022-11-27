@@ -1,9 +1,6 @@
 package ru.job4j;
 
-final class Multiple {
-    private Multiple() {
-        /*Somethings*/
-    }
+public class Multiple {
     public static void main(final String[] args) {
         System.out.println(" 1 * 2 = 2");
         System.out.println(" 1 * 3 = 3");
