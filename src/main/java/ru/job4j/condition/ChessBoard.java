@@ -6,7 +6,7 @@ public class ChessBoard {
         if (isValid(x1) && isValid(x2)
                 && isValid(y1) && isValid(y2)) {
             if (Math.abs(x1 - y1) == Math.abs(x2 - y2)) {
-                return Math.abs(x2 - x1);
+                rsl = Math.abs(x2 - x1);
             }
         }
         return rsl;
