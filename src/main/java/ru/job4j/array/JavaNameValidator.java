@@ -8,14 +8,14 @@ public class JavaNameValidator {
         if (valid) {
             char[] array = name.toCharArray();
             for (int i = 1; i < name.length(); i++) {
-                valid = (isSpecialSymbol(name.codePointAt(i))
-                        || (isUpperLatinLetter(name.codePointAt(i)))
-                        || isLowerLatinLetter(name.codePointAt(i))
-                        || Character.isDigit(name.codePointAt(i)));
-                if (!Character.isDigit(name.codePointAt(i))) {
+                if (!Character.isDigit(name.codePointAt(i)) && !notAllNumber) {
                     notAllNumber = true;
                 }
-                if (!valid) {
+                if (!(isSpecialSymbol(name.codePointAt(i))
+                        || (isUpperLatinLetter(name.codePointAt(i)))
+                        || isLowerLatinLetter(name.codePointAt(i))
+                        || Character.isDigit(name.codePointAt(i)))) {
+                    valid = false;
                     break;
                 }
             }
