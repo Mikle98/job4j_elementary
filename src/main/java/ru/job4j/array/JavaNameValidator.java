@@ -3,14 +3,10 @@ package ru.job4j.array;
 public class JavaNameValidator {
 
     public static boolean isNameValid(String name) {
-        boolean valid = !name.isEmpty() && !Character.isUpperCase(name.codePointAt(0));
-        boolean notAllNumber = false;
+        boolean valid = !name.isEmpty() && !Character.isUpperCase(name.codePointAt(0)) && !Character.isDigit(name.codePointAt(0));
         if (valid) {
             char[] array = name.toCharArray();
             for (int i = 1; i < name.length(); i++) {
-                if (!Character.isDigit(name.codePointAt(i)) && !notAllNumber) {
-                    notAllNumber = true;
-                }
                 if (!(isSpecialSymbol(name.codePointAt(i))
                         || (isUpperLatinLetter(name.codePointAt(i)))
                         || isLowerLatinLetter(name.codePointAt(i))
@@ -20,7 +16,7 @@ public class JavaNameValidator {
                 }
             }
         }
-        return valid && notAllNumber;
+        return valid;
     }
 
     public static boolean isSpecialSymbol(int code) {
