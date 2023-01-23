@@ -8,7 +8,6 @@ public class Games {
             System.out.println("I can't.");
         }
     }
-
     public static void main(String[] args) {
         Games.permission(true, true);
         Games.permission(true, false);

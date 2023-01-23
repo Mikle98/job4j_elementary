@@ -1,7 +1,6 @@
 package ru.job4j.array;
 
 public class JavaNameValidator {
-
     public static boolean isNameValid(String name) {
         boolean valid = !name.isEmpty() && !Character.isUpperCase(name.codePointAt(0)) && !Character.isDigit(name.codePointAt(0));
         if (valid) {
@@ -18,21 +17,18 @@ public class JavaNameValidator {
         }
         return valid;
     }
-
     public static boolean isSpecialSymbol(int code) {
         if (code == 36 || code == 95) {
             return true;
         }
         return false;
     }
-
     public static boolean isUpperLatinLetter(int code) {
         if (code >= 65 && code <= 90) {
             return true;
         }
         return false;
     }
-
     public static boolean isLowerLatinLetter(int code) {
         if (code >= 97 && code <= 122) {
             return true;
