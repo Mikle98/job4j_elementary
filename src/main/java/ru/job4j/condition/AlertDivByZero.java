@@ -10,6 +10,7 @@ public class AlertDivByZero {
             System.out.println("This is negative number");
         }
     }
+
     public static void main(String[] args) {
         AlertDivByZero.possibleDiv(4);
         AlertDivByZero.possibleDiv(0);
