@@ -33,4 +33,13 @@ public class PointTest {
         double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
+
+    @Test
+    public void when0and0To0and2and5Then5dot38() {
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2, 5);
+        double out = a.distance3d(b);
+        double expected = 5.38D;
+        Assert.assertEquals(expected, out, 0.01);
+    }
 }
